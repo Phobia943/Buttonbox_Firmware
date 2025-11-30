@@ -1,0 +1,119 @@
+{
+  "version": 0.2,
+  "entities": {
+    "FunkySwitch": 0,
+    "KeyMatrix": 1
+  },
+  "page0": {
+    "FunkySwitch": {
+      "0": {
+        "press": [],
+        "release": []
+      },
+      "1": {
+        "press": [],
+        "release": []
+      },
+      "2": {
+        "press": [],
+        "release": []
+      },
+      "3": {
+        "press": [],
+        "release": []
+      },
+      "4": {
+        "press": [],
+        "release": []
+      },
+      "5": {
+        "increase": [
+          {"push": "volup"}
+        ],
+        "decrease": [
+          {"push": "voldown"}
+        ]
+      }
+    },
+    "KeyMatrix": {
+      "0": {
+        "press": [
+          {"led": "green"},
+          {"push": "a"},
+          {"wait": 1000},
+          {"led": "red"},
+          {"write": "Hallo Welt\n"},
+          {"push": {
+            "key": "a",
+            "modifier": "ctrl"
+          }},
+          {"wait": 1000}
+        ],
+        "release": [
+          {"led": "white"}
+        ]
+      },
+      "1":{
+        "press": [
+          {"push": "escape"},
+          {"wait": 1000},
+          {"push": "tab"},
+          {"wait": 1000},
+          {"push": "backspace"}
+        ]
+      },
+      "2": {
+        "press": [
+          {"push": "playpause"}
+        ]
+      },
+      "3": {
+        "press": [
+          {"push": "prev"}
+        ]
+      },
+      "4": {
+        "press": [],
+        "release": []
+      },
+      "5": {
+        "press": [],
+        "release": []
+      },
+      "6": {
+        "press": [
+          {"push": "playpause"}
+        ]
+      },
+      "7": {
+        "press": [],
+        "release": []
+      },
+      "8": {
+        "press": [],
+        "release": []
+      },
+      "9": {
+        "press": [
+          {"push": "next"}
+        ]
+      },
+      "10": {
+        "press": [
+          {"press": "G20"}
+        ],
+        "release": [
+          {"release": "G20"}
+        ]
+      },
+      "11": {
+        "press": [
+          {"press": "G0"}
+        ],
+        "release": [
+          {"release": "G0"}
+        ]
+      }
+    }
+  }
+}

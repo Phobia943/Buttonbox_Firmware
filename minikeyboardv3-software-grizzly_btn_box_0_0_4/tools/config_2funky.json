@@ -1,0 +1,109 @@
+{
+  "version": 0.2,
+  "entities": {
+    "FunkySwitch1": 0,
+    "FunkySwitch2": 1,
+    "encoder1": 2,
+    "encoder2": 3,
+    "encoder3": 4,
+    "ssr1": 7
+  },
+  "page0": {
+    "FunkySwitch1": {
+      "0": {
+        "press": [{"press": "G0"}],
+        "release": [{"release": "G0"}]
+      },
+      "1": {
+        "press": [{"press": "G1"}],
+        "release": [{"release": "G1"}]
+      },
+      "2": {
+        "press": [{"press": "G2"}],
+        "release": [{"release": "G2"}]
+      },
+      "3": {
+        "press": [{"press": "G3"}],
+        "release": [{"release": "G3"}]
+      },
+      "4": {
+        "press": [{"press": "G4"}],
+        "release": [{"release": "G4"}]
+      },
+      "5": {
+        "increase": [{"push": "G5"}],
+        "decrease": [{"push": "G6"}]
+      }
+    },
+    "FunkySwitch2": {
+      "0": {
+        "press": [{"press": "G25"}],
+        "release": [{"release": "G25"}]
+      },
+      "1": {
+        "press": [{"press": "G26"}],
+        "release": [{"release": "G26"}]
+      },
+      "2": {
+        "press": [{"press": "G27"}],
+        "release": [{"release": "G27"}]
+      },
+      "3": {
+        "press": [{"press": "G28"}],
+        "release": [{"release": "G28"}]
+      },
+      "4": {
+        "press": [{"press": "G29"}],
+        "release": [{"release": "G29"}]
+      },
+      "5": {
+        "increase": [{"push": "G30"}],
+        "decrease": [{"push": "G31"}]
+      }
+    },
+    "encoder1": {
+      "0": {
+        "increase": [{"push": "G7"}],
+        "decrease": [{"push": "G8"}]
+      }
+    },
+    "encoder2": {
+      "0": {
+        "increase": [{"push": "G9"}],
+        "decrease": [{"push": "G10"}]
+      }
+    },
+    "encoder3": {
+      "0": {
+        "increase": [{"push": "G11"}],
+        "decrease": [{"push": "G12"}]
+      }
+    },
+    "ssr1": {
+      "0": {
+        "press": [{"press": "G17"}],
+        "release": [{"release": "G17"}]
+      },
+      "1": {
+        "press": [{"press": "G18"}],
+        "release": [{"release": "G18"}]
+      },
+      "2": {
+        "press": [{"press": "G19"}],
+        "release": [{"release": "G19"}]
+      },
+      "3": {
+        "press": [{"press": "G20"}],
+        "release": [{"release": "G20"}]
+      },
+      "4": {
+        "press": [{"push": "G21"}],
+        "release": [{"push": "G21"}]
+      },
+      "5": {
+        "press": [{"push": "G23"}],
+        "release": [{"push": "G23"}]
+      }
+    }
+  }
+}

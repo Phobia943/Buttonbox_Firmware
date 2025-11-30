@@ -1,0 +1,98 @@
+{
+    "version": 1.1,
+    "entities": {
+        "FunkySwitch": 0,
+        "KeyMatrix": 1
+    },
+    "sub_entities": {
+        "FunkySwitch": {
+            "Up": 0,
+            "Left": 1,
+            "Down": 2,
+            "Right": 3,
+            "Center": 4,
+            "Encoder": 5
+        }
+    },
+    "templates": {},
+    "pages": [
+        {
+            "FunkySwitch": {
+                "Up": {
+                    "press": [],
+                    "release": []
+                },
+                "Left": {
+                    "press": [],
+                    "release": []
+                },
+                "Down": {
+                    "press": [],
+                    "release": []
+                },
+                "Right": {
+                    "press": [],
+                    "release": []
+                },
+                "Center": {
+                    "press": [],
+                    "release": []
+                },
+                "Encoder": {
+                    "increase": [],
+                    "decrease": []
+                }
+            },
+            "KeyMatrix": {
+                "0": {
+                    "press": [],
+                    "release": []
+                },
+                "1":{
+                    "press": [],
+                    "release": []
+                },
+                "2": {
+                    "press": [],
+                    "release": []
+                },
+                "3": {
+                    "press": [],
+                    "release": []
+                },
+                "4": {
+                    "press": [],
+                    "release": []
+                },
+                "5": {
+                    "press": [],
+                    "release": []
+                },
+                "6": {
+                    "press": [],
+                    "release": []
+                },
+                "7": {
+                    "press": [],
+                    "release": []
+                },
+                "8": {
+                    "press": [],
+                    "release": []
+                },
+                "9": {
+                    "press": [],
+                    "release": []
+                },
+                "10": {
+                    "press": [],
+                    "release": []
+                },
+                "11": {
+                    "press": [],
+                    "release": []
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "version": 1.2,
+    "entities": {},
+    "sub_entities": {},
+    "templates": {},
+    "pages": [
+        {
+            "1": {
+                "0": {
+                    "press": [{"push": {"key": "s", "modifier": "win+shift"}}],
+                    "release": []
+                },
+                "1": {
+                    "press": [{"push": {"key": "s", "modifier": "win"}}],
+                    "release": []
+                },
+                "2": {
+                    "press": [{"push": {"key": "s", "modifier": "shift"}}],
+                    "release": []
+                }
+            }}]}

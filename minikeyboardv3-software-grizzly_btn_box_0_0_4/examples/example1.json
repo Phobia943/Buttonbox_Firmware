@@ -1,0 +1,140 @@
+{
+    "version": 1.1,
+    "entities": {
+        "FunkySwitch": 0,
+        "KeyMatrix": 1
+    },
+    "sub_entities": {
+        "FunkySwitch": {
+            "Up": 0,
+            "Left": 1,
+            "Down": 2,
+            "Right": 3,
+            "Center": 4,
+            "Encoder": 5
+        }
+    },
+    "templates": {
+        "testTemplate": {
+            "actions": [
+                {"push":  "a"},
+                {"push":  "b"}
+            ]
+        }
+    },
+    "pages": [
+        {
+            "FunkySwitch": {
+                "Up": {
+                    "press": [{"push": "up"}]
+                },
+                "Left": {
+                    "press": [{"push": "left"}]
+                },
+                "Down": {
+                    "press": [{"push": "down"}]
+                },
+                "Right": {
+                    "press": [{"push": "right"}]
+                },
+                "Center": {
+                    "press": [
+                        {
+                            "conditional": {
+                                "name": "testConditional",
+                                "newState": "toggle",
+                                "stateLed": 16
+                            }
+                        }
+                    ]
+                },
+                "Encoder": {
+                    "increase": [
+                        {"push": "volup"}
+                    ],
+                    "decrease": [
+                        {"push": "voldown"}
+                    ]
+                }
+            },
+            "KeyMatrix": {
+                "0": {
+                    "press": [
+                        {
+                            "ifCondition": {
+                                "conditional": "testConditional",
+                                "true": [{"push": "a"}, {"push": "b"}],
+                                "false": [{"push": "calculator"}]
+                            }
+                        }
+                    ],
+                    "release": []
+                },
+                "1":{
+                    "press": [
+                        {"template": "testTemplate"}
+                    ]
+                },
+                "2": {
+                    "press": [
+                        {"push": {"key": "l", "modifier": "win"}}
+                    ]
+                },
+                "3": {
+                    "press": [
+                        {"push": "prev"}
+                    ]
+                },
+                "4": {
+                    "press": [
+                        {"push": {"key": "e", "modifier": "win"}}
+                    ]
+                },
+                "5": {
+                    "press": [
+                        {"push": "win"},
+                        {"wait": 1000},
+                        {"write":  "Teamspeak"},
+                        {"push": "enter"},
+                        {"wait": 2000},
+                        {"push": {"key": "s", "modifier": "ctrl"}},
+                        {"push": "enter"}
+                    ],
+                    "release": [
+
+                    ]
+                },
+                "6": {
+                    "press": [
+                        {"push": "playpause"}
+                    ]
+                },
+                "7": {
+                    "press": [
+                        {"press": "A"}
+                    ],
+                    "release": [
+                        {"release": "A"}
+                    ]
+                },
+                "8": {
+                    "press": [
+                        {"push": "f13"}
+                    ],
+                    "release": [
+                    ]
+                },
+                "9": {
+                    "press": [{"push": "next"}]
+                },
+                "10": {
+                    "press": [{"press": "G20"}],
+                    "release": [{"release": "G20"}]
+                },
+                "11": {
+                    "press": [{"mouse": {"x": 700}}]
+                }
+            }
+        }
+    ]
+}

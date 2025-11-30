@@ -1,0 +1,96 @@
+{
+  "version": 0.2,
+  "entities": {
+    "FunkySwitch1": 0,
+    "encoder1": 2,
+    "encoder2": 3,
+    "encoder3": 4,
+    "encoder4": 5,
+    "encoder5": 6,
+    "ssr1": 7
+  },
+  "page0": {
+    "FunkySwitch1": {
+      "0": {
+        "press": [{"press":  "G0"}],
+        "release": [{"release":  "G0"}]
+      },
+      "1": {
+        "press": [{"press":  "G1"}],
+        "release": [{"release":  "G1"}]
+      },
+      "2": {
+        "press": [{"press":  "G2"}],
+        "release": [{"release":  "G2"}]
+      },
+      "3": {
+        "press": [{"press":  "G3"}],
+        "release": [{"release":  "G3"}]
+      },
+      "4": {
+        "press": [{"press":  "G4"}],
+        "release": [{"release":  "G4"}]
+      },
+      "5": {
+        "increase": [{"push":  "G5"}],
+        "decrease": [{"push":  "G6"}]
+      }
+    },
+    "encoder1": {
+      "0": {
+        "increase": [{"push":  "G7"}],
+        "decrease": [{"push":  "G8"}]
+      }
+    },
+    "encoder2": {
+      "0": {
+        "increase": [{"push":  "G9"}],
+        "decrease": [{"push":  "G10"}]
+      }
+    },
+    "encoder3": {
+      "0": {
+        "increase": [{"push":  "G11"}],
+        "decrease": [{"push":  "G12"}]
+      }
+    },
+    "encoder4": {
+      "0": {
+        "increase": [{"push":  "G13"}],
+        "decrease": [{"push":  "G14"}]
+      }
+    },
+    "encoder5": {
+      "0": {
+        "increase": [{"push":  "G15"}],
+        "decrease": [{"push":  "G16"}]
+      }
+    },
+    "ssr1": {
+      "0": {
+        "press": [{"press":  "G17"}],
+        "release": [{"release":  "G17"}]
+      },
+      "1": {
+        "press": [{"press":  "G18"}],
+        "release": [{"release":  "G18"}]
+      },
+      "2": {
+        "press": [{"press":  "G19"}],
+        "release": [{"release":  "G19"}]
+      },
+      "3": {
+        "press": [{"press":  "G20"}],
+        "release": [{"release":  "G20"}]
+      },
+      "4": {
+        "press": [{"press":  "G21"}],
+        "release": [{"release":  "G21"}]
+      },
+      "5": {
+        "press": [{"press":  "G22"}],
+        "release": [{"release":  "G22"}]
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+    "version": 1.1,
+    "entities": {
+        "FunkySwitch1": 0,
+        "FunkySwitch2": 1,
+        "encoder1": 2,
+        "encoder2": 3,
+        "encoder3": 4,
+        "ssr1": 7
+    },
+    "sub_entities": {
+        "FunkySwitch1": {
+            "Up": 0,
+            "Left": 1,
+            "Down": 2,
+            "Right": 3,
+            "Center": 4,
+            "Encoder": 5
+        },
+        "FunkySwitch2": {
+            "Up": 0,
+            "Left": 1,
+            "Down": 2,
+            "Right": 3,
+            "Center": 4,
+            "Encoder": 5
+        }
+    },
+    "pages": [{
+        "FunkySwitch1": {
+            "Up": {
+                "press": [{"press": "G0"}],
+                "release": [{"release": "G0"}]
+            },
+            "Left": {
+                "press": [{"press": "G1"}],
+                "release": [{"release": "G1"}]
+            },
+            "Down": {
+                "press": [{"press": "G2"}],
+                "release": [{"release": "G2"}]
+            },
+            "Right": {
+                "press": [{"press": "G3"}],
+                "release": [{"release": "G3"}]
+            },
+            "Center": {
+                "press": [{"press": "G4"}],
+                "release": [{"release": "G4"}]
+            },
+            "Encoder": {
+                "increase": [{"push": "G5"}],
+                "decrease": [{"push": "G6"}]
+            }
+        },
+        "FunkySwitch2": {
+            "Up": {
+                "press": [{"press": "G7"}],
+                "release": [{"release": "G7"}]
+            },
+            "Left": {
+                "press": [{"press": "G8"}],
+                "release": [{"release": "G8"}]
+            },
+            "Down": {
+                "press": [{"press": "G9"}],
+                "release": [{"release": "G9"}]
+            },
+            "Right": {
+                "press": [{"press": "G10"}],
+                "release": [{"release": "G10"}]
+            },
+            "Center": {
+                "press": [{"press": "G11"}],
+                "release": [{"release": "G11"}]
+            },
+            "Encoder": {
+                "increase": [{"push": "G12"}],
+                "decrease": [{"push": "G13"}]
+            }
+        },
+        "encoder1": {
+            "0": {
+                "increase": [{"push": "G14"}],
+                "decrease": [{"push": "G15"}]
+            }
+        },
+        "encoder2": {
+            "0": {
+                "increase": [{"push": "G16"}],
+                "decrease": [{"push": "G17"}]
+            }
+        },
+        "encoder3": {
+            "0": {
+                "increase": [{"push": "G18"}],
+                "decrease": [{"push": "G19"}]
+            }
+        },
+        "ssr1": {
+            "0": {
+                "press": [{"press": "G20"}],
+                "release": [{"release": "G20"}]
+            },
+            "1": {
+                "press": [{"press": "G21"}],
+                "release": [{"release": "G21"}]
+            },
+            "2": {
+                "press": [{"press": "G22"}],
+                "release": [{"release": "G22"}]
+            },
+            "3": {
+                "press": [{"press": "G23"}],
+                "release": [{"release": "G23"}]
+            },
+            "4": {
+                "press": [{"press": "G24"}],
+                "release": [{"release": "G24"}]
+            },
+            "5": {
+                "press": [{"press": "G25"}],
+                "release": [{"release": "G25"}]
+            },
+            "6": {
+                "press": [{"press": "G26"}],
+                "release": [{"release": "G26"}]
+            },
+            "7": {
+                "press": [{"press": "G27"}],
+                "release": [{"release": "G27"}]
+            }
+        }
+    }]
+}
