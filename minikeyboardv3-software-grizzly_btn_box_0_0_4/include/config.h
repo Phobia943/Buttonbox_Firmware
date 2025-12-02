@@ -7,9 +7,9 @@
 #define DEBOUNCE_DEFAULT_TIME_MS    50
 #define DEFAULT_BRIGHTNESS          30
 
-//#define BOARD_TYPE_MINIKEYBOARD
+////#define BOARD_TYPE_MINIKEYBOARD
 //#define BOARD_TYPE_BUTTON_BOX_1FUNKY
-#define BOARD_TYPE_BUTTON_BOX_2FUNKY
+//#define BOARD_TYPE_BUTTON_BOX_2FUNKY
 
 #if defined(BOARD_TYPE_MINIKEYBOARD)
 #include "config_minikeyboard.h"

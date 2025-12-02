@@ -26,17 +26,21 @@ Dies ist eine Zusammenfassung des aktuellen Projektstands und der geplanten näc
 
 ## Roadmap (Nächste Schritte)
 
-### 1. Firmware - Dynamische Hardware-Konfiguration (Jumper-Erkennung)
-*   **Ziel:** Die Firmware soll zur Laufzeit erkennen können, ob ein Jumper gesteckt ist, um zwischen den "1 Funky + Encoder" und "2 Funky" Hardware-Setups umzuschalten.
-*   **Problem:** Der genaue Pin für diesen Jumper auf dem PCB ist mir noch nicht bekannt. Die derzeitige Firmware-Struktur nutzt `#define` zur Kompilierzeit, was geändert werden muss, um eine dynamische Erkennung zu ermöglichen.
-*   **Nächster Schritt (Feedback benötigt):** **Ich benötige den genauen Pin, der für den Jumper zum Umschalten zwischen den beiden Hardware-Setups verwendet wird.** Basierend auf dieser Information kann ich die Firmware anpassen, um diese dynamische Initialisierung zu implementieren (z.B. durch Umstellung auf `std::vector` für Input-Geräte und Lesen des Pins in `setup()`).
+### 1. Firmware - Hardware-Konfiguration über Build-Umgebungen
+*   **Status:** **IMPLEMENTIERT**.
+*   **Beschreibung:** Da der Jumper zur Laufzeiterkennung von Hardware-Setups in Version 1.1 entfallen ist, wurde die Strategie geändert. Es wurden separate Build-Umgebungen in `platformio.ini` erstellt (z.B. `env:minikeyboard`, `env:buttonbox_1funky`, `env:buttonbox_2funky`). Jede Umgebung definiert den benötigten `BOARD_TYPE_...` während des Kompilierens.
+*   **Vorteil:** Dies ermöglicht optimierte Firmware-Builds für jede Hardware-Variante und vermeidet unnötigen Code oder dynamische Erkennungslogik zur Laufzeit.
+*   **Nächster Schritt:** Im Konfigurations-Tool sollte die Möglichkeit geschaffen werden, die korrekte Firmware für die entsprechende Hardware-Variante auszuwählen und zu flashen.
 
 ### 2. Konfigurations-Tool - Erweiterter Konfigurationseditor
-*   **Ziel:** Statt nur das rohe JSON anzuzeigen, soll eine benutzerfreundliche Oberfläche zum Bearbeiten der Tastenbelegungen und visuellen Anpassungen mit Bildern erstellt werden.
-*   **Nächster Schritt:**
-    *   Entwicklung eines JSON-Parsers innerhalb der Python-App, um die Konfiguration in editierbare Datenfelder umzuwandeln.
-    *   Implementierung einer visuellen Darstellung der Buttonbox (z.B. mit Bildern) im "Configuration"-Tab, auf der Tasten ausgewählt und ihre Aktionen zugewiesen werden können.
-    *   Implementierung der "Save Config to Device"-Funktion, die die bearbeitete Konfiguration zurück an die Buttonbox sendet.
+*   **Status:** **IMPLEMENTIERT (Basis-Funktionalität inkl. Config-Generator)**
+*   **Beschreibung:**
+    *   Der serielle Kommunikationscode in `ConfigTool/main.py` wurde überarbeitet, um die gesamte JSON-Konfiguration vom Gerät zu laden.
+    *   Eine interne JSON-Parsing-Logik wurde hinzugefügt, um die empfangene Konfiguration in Python-Datenstrukturen zu konvertieren.
+    *   Eine rudimentäre visuelle Darstellung der geladenen Konfiguration (`self.config_data`) wird nun im "Configuration"-Tab angezeigt, indem die Top-Level-Sektionen (`pages`, `templates`, `entities`) und ihre Inhalte zusammengefasst werden.
+    *   Die Funktion zum Speichern der Konfiguration auf dem Gerät über die serielle Schnittstelle wurde implementiert.
+    *   **NEU: Config-Generator:** Eine Benutzeroberfläche mit Dropdown-Menüs wurde hinzugefügt, die es dem Benutzer ermöglicht, eine leere JSON-Konfiguration basierend auf der Anzahl der gewünschten Funky Switches, Encoder und Buttons zu generieren. Dies erleichtert die initiale Einrichtung eines Boards erheblich.
+*   **Nächster Schritt:** Weiterentwicklung des visuellen Editors, um das Bearbeiten von Tastenbelegungen und Aktionen direkt über die GUI zu ermöglichen. (Dies wäre der nächste Schritt, wenn der Punkt weiterentwickelt wird.)
 
 ### 3. Firmware - SimHub Output-Kontrolle
 *   **Ziel:** Die Buttonbox soll auf SimHub-Ausgangsdaten reagieren und externe Hardware (LEDs, Displays, etc.) steuern können.

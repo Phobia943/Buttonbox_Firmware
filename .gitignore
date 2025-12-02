@@ -1,0 +1,14 @@
+ConfigTool/venv/
+.pio_venv/
+ConfigTool/build/
+ConfigTool/dist/
+*.tmp
+*.spec
+!ConfigTool/ButtonboxTool.spec
+__pycache__/
+*.pyc
+.pio/
+GEMINI.md
+INIT.md
+NOTES.md
+ROADMAP.md

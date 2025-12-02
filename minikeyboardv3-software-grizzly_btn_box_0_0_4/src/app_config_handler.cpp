@@ -326,21 +326,29 @@ bool AppConfigHandler::begin() {
 }
 
 bool AppConfigHandler::load(const std::string& filenameOverride) {
-//    if (!this->littleFSStarted){
-//        Serial.println("Cannot load from LittleFS LittleFS is not started");
-//        return false;
-//    }
-//    std::string filename = filenameOverride.empty() ? this->currentFileName : filenameOverride;
-//    File configFile = LittleFS.open(filename.c_str(), "r");
-//    if (!configFile){
-//        Serial.println("Could not open config file!");
-//        return false;
-//    }
-//    Serial.println("Config file opened successfully!");
-    DeserializationError err;
     JsonDocument jsonConf;
-    err = deserializeJson(jsonConf, conf);
-    //configFile.close();
+    DeserializationError err;
+    bool loadedFromFile = false;
+
+    if (this->littleFSStarted){
+        std::string filename = filenameOverride.empty() ? this->currentFileName : filenameOverride;
+        File configFile = LittleFS.open(filename.c_str(), "r");
+        if (configFile){
+             Serial.print("Loading config from file: "); Serial.println(filename.c_str());
+             err = deserializeJson(jsonConf, configFile);
+             configFile.close();
+             loadedFromFile = true;
+        } else {
+             Serial.println("Could not open config file! Using built-in default.");
+        }
+    } else {
+        Serial.println("LittleFS not started. Using built-in default.");
+    }
+
+    if (!loadedFromFile) {
+        err = deserializeJson(jsonConf, conf);
+    }
+
     if (err){
         Serial.print("Error while parsing config file: ");
         Serial.println(err.c_str());

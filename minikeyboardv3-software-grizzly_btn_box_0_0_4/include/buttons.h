@@ -2,12 +2,13 @@
 // Created by Simon on 25.10.2023.
 //
 #pragma once
-#include "Arduino.h"
+
+#include <Arduino.h>
 #include <cstdint>
-#include <utility>
-#include <config.h>
-#include <RotaryEncoder.h>
 #include <string>
+#include <vector>
+#include <RotaryEncoder.h>
+#include "config.h"
 
 #define FANCY_SWITCH_SAFETY_SKIP_INTERVAL_MS 10
 

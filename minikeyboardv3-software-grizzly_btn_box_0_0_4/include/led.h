@@ -3,10 +3,14 @@
 //
 
 #pragma once
-#include <Adafruit_NeoPixel.h>
-#include <map>
-#include <string>
+
+#include <cstdint>
 #include <utility>
+#include <vector>
+#include "config.h"
+#include <map>
+#include <Adafruit_NeoPixel.h>
+#include <string>
 
 //#define RAINBOW_MODE
 

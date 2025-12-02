@@ -18,6 +18,10 @@ USB usb = USB();
 InterfaceProvider* interfaceProvider = new SerialInterfaceProvider();
 
 void device_callback (uint8_t entity, InputDeviceType_t type, uint8_t subId, bool value, int32_t value_alt){
+    Serial.print("__INPUT_EVENT__:");
+    Serial.print(entity); Serial.print(":");
+    Serial.print(subId); Serial.print(":");
+    Serial.println(value);
     appConfigHandler.handleActions(usb, lightDevices, type, entity, subId, value, value_alt);
 }
 
