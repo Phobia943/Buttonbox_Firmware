@@ -1,0 +1,40 @@
+GRIZZLY BUTTONBOX - SCHNELLSTART ANLEITUNG
+==========================================
+
+Vielen Dank für den Kauf der Grizzly Buttonbox!
+
+INHALT DIESES PAKETS
+--------------------
+1. ButtonboxTool.exe  (Zum Konfigurieren und Aktualisieren)
+2. firmware/          (Ordner mit Firmware-Dateien zur Sicherheit)
+
+
+SCHRITT 1: ANSCHLIEßEN
+----------------------
+Schließen Sie die Buttonbox einfach per USB an Ihren PC an.
+
+
+SCHRITT 2: SOFTWARE STARTEN
+---------------------------
+Starten Sie die "ButtonboxTool.exe". Es ist keine Installation notwendig.
+Das Tool sollte Ihre Buttonbox automatisch erkennen.
+
+
+SCHRITT 3: FIRMWARE AKTUALISIEREN (falls nötig)
+-----------------------------------------------
+Sollte die Firmware aktualisiert werden müssen:
+1. Drücken Sie im Tool auf den Button "Flash Firmware" (oder ähnlich).
+2. Wählen Sie die passende Version (meistens "Buttonbox 2 Funky" oder entsprechend Ihrer Hardware).
+3. Das Tool führt Sie durch den Prozess.
+
+FALLS AUTOMATISCH NICHT FUNKTIONIERT (MANUELL FLASHEN):
+1. Buttonbox vom USB trennen.
+2. Die weiße Taste auf dem Raspberry Pi Pico (im Gehäuse, oft durch ein kleines Loch erreichbar oder beim Einstecken gedrückt halten) gedrückt halten.
+3. USB einstecken -> Ein neues Laufwerk "RPI-RP2" erscheint im Windows Explorer.
+4. Aus dem Ordner "firmware" in diesem Paket die passende Datei (z.B. "buttonbox_2funky.uf2") einfach auf das Laufwerk "RPI-RP2" ziehen.
+5. Die Box startet neu und ist einsatzbereit.
+
+
+HILFE & SUPPORT
+---------------
+Bei Fragen wenden Sie sich bitte an Grizzly Simgineering.

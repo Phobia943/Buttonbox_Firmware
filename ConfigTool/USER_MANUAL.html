@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grizzly Buttonbox - Benutzerhandbuch</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 40px;
+            border-left: 5px solid #3498db;
+            padding-left: 10px;
+        }
+        h3 {
+            color: #7f8c8d;
+            margin-top: 25px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .screenshot-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: #ecf0f1;
+            border: 2px dashed #bdc3c7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #7f8c8d;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-weight: bold;
+            flex-direction: column;
+        }
+        .screenshot-placeholder span {
+            font-size: 0.9em;
+            font-weight: normal;
+            margin-top: 10px;
+        }
+        code {
+            background-color: #e0e0e0;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        .note {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .step {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.8em;
+            color: #95a5a6;
+            border-top: 1px solid #e0e0e0;
+            padding-top: 20px;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+                max-width: 100%;
+            }
+            .screenshot-placeholder {
+                border: 1px solid #ddd;
+                background-color: #fff;
+                /* Wenn Sie Screenshots eingefügt haben, entfernen Sie diesen Block nicht, 
+                   sondern ersetzen Sie die div-Klasse durch ein <img> Tag. */
+            }
+            /* Um Platz sparen beim Drucken */
+            h1 { margin-top: 0; }
+            .page-break { page-break-before: always; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Grizzly Buttonbox <small style="font-size: 0.6em; color: #7f8c8d;">Benutzerhandbuch</small></h1>
+
+    <p>Vielen Dank, dass Sie sich für die Grizzly Buttonbox entschieden haben. Dieses Handbuch führt Sie durch die Installation, das Firmware-Update und die Konfiguration Ihrer neuen Hardware.</p>
+
+    <div class="note">
+        <strong>Hinweis:</strong> Bitte schließen Sie die Buttonbox an einen USB-Port Ihres Computers an, bevor Sie die Software starten.
+    </div>
+
+    <h2>1. Software Übersicht</h2>
+    <p>Starten Sie die <code>ButtonboxTool.exe</code>. Es ist keine Installation notwendig. Nach dem Start sollten Sie den folgenden Bildschirm sehen:</p>
+
+    <!-- PLATZHALTER 1 -->
+    <div class="screenshot-placeholder">
+        PLATZHALTER: Startbildschirm (Main Window)
+        <span>(Machen Sie einen Screenshot vom Tool direkt nach dem Start)</span>
+    </div>
+
+    <div class="step">
+        <h3>Verbindung herstellen</h3>
+        <ol>
+            <li>Wählen Sie links unter <strong>Select Port</strong> den entsprechenden COM-Port Ihrer Buttonbox aus (oft als "USB Serial Device" erkannt).</li>
+            <li>Klicken Sie auf <strong style="color: green;">Connect</strong>.</li>
+            <li>Der Status unten links sollte auf <span style="color: green;">Connected</span> wechseln.</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h2>2. Firmware Update</h2>
+    <p>Falls ein Update notwendig ist oder Sie die Buttonbox neu flashen möchten:</p>
+
+    1. Klicken Sie im Hauptfenster auf den Tab <strong>Firmware Update</strong>.
+    2. Wählen Sie unter <strong>Select Device</strong> Ihr Modell aus (z.B. "Buttonbox (2 Funkys)").
+
+    <!-- PLATZHALTER 2 -->
+    <div class="screenshot-placeholder">
+        PLATZHALTER: Firmware Update Tab
+        <span>(Screenshot vom Tab "Firmware Update" mit ausgewähltem Gerät)</span>
+    </div>
+
+    3. Klicken Sie auf <strong>1. Reboot to Bootloader</strong>. Das Gerät startet neu und meldet sich als Laufwerk an.
+    4. Klicken Sie anschließend auf <strong style="color: orange;">3. Flash Firmware</strong>.
+    5. Warten Sie auf die Erfolgsmeldung.
+
+    <div class="page-break"></div>
+
+    <h2>3. Konfiguration erstellen & ändern</h2>
+    <p>Wechseln Sie in den Tab <strong>Configuration</strong>. Hier können Sie die Tastenbelegung Ihrer Buttonbox anpassen.</p>
+
+    <!-- PLATZHALTER 3 -->
+    <div class="screenshot-placeholder">
+        PLATZHALTER: Configuration Tab
+        <span>(Screenshot vom Tab "Configuration", evtl. mit geladener Config)</span>
+    </div>
+
+    <h3>Neue Konfiguration erstellen</h3>
+    <ol>
+        <li>Wählen Sie im Bereich "Create New Config" die Anzahl Ihrer Funkys, Encoder und Buttons.</li>
+        <li>Klicken Sie auf <strong>Generate Empty Config</strong>.</li>
+        <li>Die Konfiguration erscheint im Textfeld unten.</li>
+    </ol>
+
+    <h3>Tasten automatisch erkennen (Latching Switches)</h3>
+    <p>Für Kippschalter (Latching Switches), die dauerhaft an/aus bleiben, nutzen Sie den "Input Detector":</p>
+    <ol>
+        <li>Stellen Sie sicher, dass Sie verbunden sind (<span style="color: green;">Connected</span>).</li>
+        <li>Klicken Sie auf <strong>Start Listening</strong>.</li>
+        <li>Betätigen Sie den Schalter an der Box.</li>
+        <li>Sobald er erkannt wurde ("Detected: ..."), klicken Sie auf <strong>Add as Latching Switch</strong>.</li>
+        <li>Das Tool fügt automatisch die Logik hinzu (Taste drücken bei AN, Taste loslassen bei AUS).</li>
+    </ol>
+
+    <h3>Speichern</h3>
+    <p>Vergessen Sie nicht, Ihre Änderungen mit einem Klick auf <strong style="color: green;">Save Config to Device</strong> zu speichern. Die Box startet kurz neu, um die Änderungen zu übernehmen.</p>
+
+    <div class="footer">
+        &copy; 2025 Grizzly Simgineering. Alle Rechte vorbehalten.
+    </div>
+
+</body>
+</html>
